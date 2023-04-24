@@ -8,4 +8,16 @@
 
 .generatedCode__container h1{
   color:  #E6E5EA;
+  font-size: 2rem;
+  font-weight: 700;
+  
     }
+    .generatedCode__container img{
+      height:2rem;
+
+    }
+   .copy__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }

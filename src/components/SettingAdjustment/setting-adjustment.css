@@ -23,45 +23,53 @@ align-items: center;
 
 }
 .slidecontainer {
-    width: 100%; /* Width of the outside container */
+    width: 100%; 
   }
   
-  /* The slider itself */
+
   input {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;  
     appearance: none;
     border-radius: 5px;
-    width: 100%; /* Full-width */
-    height: 15px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    width: 100%; 
+    height: 15px; 
+    background: linear-gradient(90deg, #A4FFAF 50%,rgb(214,214,214) 50%);
+   /*   `linear-gradient(to right, red 0%, red ${(value-min)/(max-min)*100}%, #DEE2E6 ${(value-min)/(max-min)*100}%, #DEE2E6 100%)`*/
+  /* background: linear-gradient(90deg, rgb(117,252,117)7%,rgb(214,214,214)7%);*/
+    /*overflow: hidden;*/
+
+    
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s;
     transition: opacity .2s;
   }
+ 
   
-  /* Mouse-over effects */
+
 input:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1; 
   }
   
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  
   input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px; 
     height: 25px;
     background: #04AA6D; 
-    cursor: pointer; 
+    cursor:pointer;
     border-radius: 50%;
+    /*box-shadow: -300px 0 0 300px #A4FFAF;*/
   }
   
   input::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px;
+    height: 25px; 
+    background: #04AA6D; 
+    cursor: pointer; 
     border-radius: 50%;
+   
   }
 
   .character-length{
@@ -80,6 +88,12 @@ padding:1rem;
 color:#817D92;
 margin-bottom: 1rem;
 }
+.strength-label{
+  font-size: 1.12;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
 .strength-meter{
   display: flex;
   gap:1rem;
@@ -88,20 +102,99 @@ margin-bottom: 1rem;
 }.strength-meter p{
 color:#E6E5EA;
 text-transform:uppercase;
+font-size: 1.5rem;
+font-weight: 700;
 }
 .bar{
-  background-color: yellow;
-  width:10px;
+background-color: transparent;
+border: 2px solid white;
+  width:8.5px;
 }
-.strength-bar{
-display: flex;
-gap:0.2rem;
+.bar-tooweak {
+
+  display: flex;
+  
+  gap: 0.3rem;
 }
+.bar-weak{
+  display: flex;
+  
+  gap: 0.3rem;
+
+}
+.bar-medium{
+  display: flex;
+  
+  gap: 0.3rem;
+
+}
+.bar-strong{
+  display: flex;
+  
+  gap: 0.3rem;
+ 
+}
+.bar-default{
+  display: flex;
+  
+  gap: 0.3rem;
+}
+
 
 button{
   width:100%;
-  padding:0.7rem;
+  padding:1rem;
 background-color: #A4FFAF;
+font-weight: 700;
+font-size: 1.12rem;
+display: flex;
+justify-content: center;
+gap: 0.7rem;
+align-items: center;
 
 }
 
+.bar-tooweak div:nth-child(1){
+ 
+  background-color: #F64A4A;
+  border: none;
+
+}
+
+.bar-tooweak div:nth-child(2),.bar-tooweak div:nth-child(3),.bar-tooweak div:nth-child(4){
+ 
+  background-color:transparent;
+  border: 2px solid white;
+
+}
+.bar-weak div:nth-child(1), .bar-weak div:nth-child(2){
+ background-color: #FB7C58;
+ border: none;
+}
+.bar-weak div:nth-child(3), .bar-weak div:nth-child(4){
+
+   
+  background-color:transparent;
+  border: 2px solid white;
+ }
+
+ .bar-medium div:nth-child(1), .bar-medium div:nth-child(2),.bar-medium div:nth-child(3){
+  background-color: #F8CD65;
+  border: none;
+
+ }
+.bar-medium div:nth-child(4){
+
+   
+  background-color:transparent;
+  border: 2px solid white;
+ }
+
+ .bar-strong div:nth-child(1), .bar-strong div:nth-child(2),.bar-strong div:nth-child(3),.bar-strong div:nth-child(4) {
+  background-color:#A4FFAF;
+  border: none;
+
+ }
+ 
+
+ 
