@@ -21,7 +21,7 @@ function App() {
  // const [strength,setStrength]=React.useState("");
 
  // const letterList=['a','b','c','d'];
-  const letterList = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
+  const letterList = [...Array(26)].map((_, i) => String.fromCharCode(i + 97))
   const upperLetterList = letterList.map(function(x){ return x.toUpperCase(); })
   const numberList = ['0', '1', '2','3','4','5','6','7','8','9'];
 const symbols = ['!', '@', '#', '$','%', '^', '&', '*'];
@@ -57,17 +57,17 @@ if(checkBoxValue.includesNumbers===true){
   generatedArray.push(random);
  
 }
- if(checkBoxValue.includesLowercase===true){
+  if(checkBoxValue.includesLowercase===true){
   random = letterList[Math.floor(Math.random()*letterList.length)]
   generatedArray.push(random)
  
 }
- if(checkBoxValue.includesUppercase===true){
+   if(checkBoxValue.includesUppercase===true){
   random = upperLetterList[Math.floor(Math.random()*upperLetterList.length)]
   generatedArray.push(random)
   
 }
-if(checkBoxValue.includesSymbol===true){
+ if(checkBoxValue.includesSymbol===true){
   random = symbols[Math.floor(Math.random()*symbols.length)]
   generatedArray.push(random)
 
