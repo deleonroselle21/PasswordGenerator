@@ -10,7 +10,7 @@ function App() {
   const [sliderValue,setSliderValue]=React.useState(10);
   const [code,setCode]=React.useState("");
   const [strengthValue,setStrength]=React.useState("METER");
-  //const [strengthLength,setStrength]=React.useState(0);
+
   const [checkBoxValue,setcheckBoxValue]=React.useState({
       includesUppercase:false,
       includesLowercase:false,
@@ -18,9 +18,9 @@ function App() {
       includesSymbol:false
   })
   let strength=0;
- // const [strength,setStrength]=React.useState("");
 
- // const letterList=['a','b','c','d'];
+
+
   const letterList = [...Array(26)].map((_, i) => String.fromCharCode(i + 97))
   const upperLetterList = letterList.map(function(x){ return x.toUpperCase(); })
   const numberList = ['0', '1', '2','3','4','5','6','7','8','9'];
@@ -48,7 +48,7 @@ const [styleslider,setStyleSlider]=React.useState("");
   const handleSubmit=()=>{
       let random;
       let generatedArray=[];
-     //console.log(generatedArray);
+   
     
    while(generatedArray.length<sliderValue){
 if(checkBoxValue.includesNumbers===true){
@@ -73,7 +73,7 @@ if(checkBoxValue.includesNumbers===true){
 
 }
    }
-  //setCode(generatedArray);
+
   let shuffled = generatedArray
   .map(value => ({ value, sort: Math.random() }))
   .sort((a, b) => a.sort - b.sort)
@@ -110,24 +110,6 @@ if(checkBoxValue.includesNumbers===true){
    
 
     }
-    /*
-    const handleStrength=()=>{
-      setStrength(strengthLength+1);
-      if(strengthLength===2){
-      console.log("weak")
-      }
-      if(strengthLength===3){
-        console.log("medium")
-        }
-        if(strengthLength===4){
-          console.log("Strong")
-          }
-          if(strengthLength===1)
-          {
-            console.log("super weak")
-          }
-    }
-    */
 
 
   
