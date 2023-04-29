@@ -8,6 +8,8 @@
 
 .generatedCode__container h1{
   color:  #E6E5EA;
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   font-weight: 700;
   
@@ -46,4 +48,9 @@ left:-100px;
    padding: 1rem;
 
 
+   }
+   @media only screen and (min-width:320px) and (max-width:480px){
+    .generatedCode__container h1{
+      font-size:1.5rem;
+    }
    }

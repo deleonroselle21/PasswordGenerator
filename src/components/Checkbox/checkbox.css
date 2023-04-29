@@ -1,16 +1,22 @@
 .checkbox__container input{
     display: inline-block;
     height:20px;
+ 
   
     
 }
 .cbox{
     display: flex;
 }
-label{
+label h1{
     color: #E6E5EA;
+   
+padding-left:1rem;
     font-size: 1.12rem;
     font-weight: 700;
+    
+   
+   
 
 }
 
@@ -19,12 +25,14 @@ label{
     position: relative;
     padding-left: 35px;
     margin-bottom: 25px;
+ 
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    
   }
   
 
@@ -32,6 +40,7 @@ label{
     position: absolute;
     opacity: 0;
     cursor: pointer;
+   
     height: 0;
     width: 0;
   }
@@ -44,6 +53,7 @@ label{
     height: 25px;
     width: 25px;
     background-color: #18171F;
+    border: 1px solid white;
     
   }
   
@@ -76,8 +86,15 @@ label{
     width: 5px;
     height: 10px;
     border: solid black;
+    
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  @media only screen and (min-width:320px) and (max-width:480px){
+    label h1{
+      font-size:1rem;
+    }
   }
