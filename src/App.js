@@ -10,6 +10,7 @@ function App() {
   const [sliderValue,setSliderValue]=React.useState(10);
   const [code,setCode]=React.useState("");
   const [strengthValue,setStrength]=React.useState("METER");
+  
 
   const [checkBoxValue,setcheckBoxValue]=React.useState({
       includesUppercase:false,
@@ -33,7 +34,7 @@ const [styleslider,setStyleSlider]=React.useState("");
 
       let value = (event.target.value-event.target.min.min)/(event.target.max-event.target.min)*100
   
- setStyleSlider(`linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${(event.target.value-event.target.min)/(event.target.max-event.target.min)*100}%, #DEE2E6 ${(event.target.value-event.target.min)/(event.target.max-event.target.min)*100}%, #DEE2E6 100%)`);
+ setStyleSlider(`linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${(event.target.value-event.target.min)/(event.target.max-event.target.min)*100}%, #18171F ${(event.target.value-event.target.min)/(event.target.max-event.target.min)*100}%, #18171F 100%)`);
    
   }
   const handleCheckChange=(event)=>{
@@ -120,7 +121,7 @@ if(checkBoxValue.includesNumbers===true){
       
      <div className='main__container'>
      <h1 className='title'>Password Generator</h1>
-     < GeneratedCode generatedCode={code}/>
+     < GeneratedCode generatedCode={code} />
     <SettingAdjustment  styleslider={styleslider} sliderValue={sliderValue} checkBoxValue={checkBoxValue} handleChange={handleChange} handleCheckChange={handleCheckChange} handleSubmit={handleSubmit} strength={strengthValue}/>
     
 

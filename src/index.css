@@ -11,7 +11,8 @@ body{
   justify-content: center;
   align-items: center;
   background-color: black;
-  height:100vh
+  height: 100vh;
+ 
 }
 .main__container{
   width: 540px;

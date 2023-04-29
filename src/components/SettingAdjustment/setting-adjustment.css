@@ -32,8 +32,8 @@ align-items: center;
     appearance: none;
     border-radius: 5px;
     width: 100%; 
-    height: 15px; 
-    background: linear-gradient(90deg, #A4FFAF 50%,rgb(214,214,214) 50%);
+    height: 8px; 
+    background: linear-gradient(90deg, #A4FFAF 50%,#18171F 50%);
  
     
     outline: none; 
@@ -54,7 +54,7 @@ input:hover {
     appearance: none;
     width: 25px; 
     height: 25px;
-    background: #04AA6D; 
+    background:white;
     cursor:pointer;
     border-radius: 50%;
   
