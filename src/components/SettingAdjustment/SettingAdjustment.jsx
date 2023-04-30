@@ -72,6 +72,8 @@ const SettingAdjustment = (props) => {
    <p> Generate</p>
     <img src={ArrowIcon} alt="arrow" />
   </button>
+
+  
   
     </div>
    

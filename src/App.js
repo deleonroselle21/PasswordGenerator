@@ -10,6 +10,8 @@ function App() {
   const [sliderValue,setSliderValue]=React.useState(10);
   const [code,setCode]=React.useState("");
   const [strengthValue,setStrength]=React.useState("METER");
+ // const[strength,setStrengthChecked]=React.useState(0);
+  const [errMessage,setError]=React.useState("Could not generate password. Please change password length");
   
 
   const [checkBoxValue,setcheckBoxValue]=React.useState({
@@ -44,12 +46,42 @@ const [styleslider,setStyleSlider]=React.useState("");
           ...prevValue,
           [name]:checked
       }));
+
+
+   
+      console.log(strength)
+     
+    
    
   }
   const handleSubmit=()=>{
       let random;
       let generatedArray=[];
-   
+
+      Object.keys(checkBoxValue).forEach(function(key) {
+        if (checkBoxValue[key]===true) {
+          strength=strength+1;
+          //setStrengthChecked(prevValue=>prevValue+1)
+        //  console.log(strength)
+       
+        }
+        if(strength===1){
+          setStrength("TOO WEAK!")
+        }
+        if(strength===2){
+          setStrength("WEAK")
+        }
+        if(strength===3){
+          setStrength("MEDIUM")
+        }
+        if(strength===4){
+          setStrength("STRONG")
+        }
+      
+        
+      });
+      if(strength<=sliderValue){
+       
     
    while(generatedArray.length<sliderValue){
 if(checkBoxValue.includesNumbers===true){
@@ -80,27 +112,13 @@ if(checkBoxValue.includesNumbers===true){
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value)
  setCode(shuffled);
+ 
 
-
-
-        Object.keys(checkBoxValue).forEach(function(key) {
-          if (checkBoxValue[key] == true) {
-            strength=strength+1;
-          }
-        });
-        console.log(strength)
-        if(strength==1){
-          setStrength("TOO WEAK!")
-        }
-        if(strength==2){
-          setStrength("WEAK")
-        }
-        if(strength==3){
-          setStrength("MEDIUM")
-        }
-        if(strength==4){
-          setStrength("STRONG")
-        }
+  }else{
+    
+    alert(errMessage);
+  }
+       
    
    
     
@@ -122,7 +140,7 @@ if(checkBoxValue.includesNumbers===true){
      <div className='main__container'>
      <h1 className='title'>Password Generator</h1>
      < GeneratedCode generatedCode={code} />
-    <SettingAdjustment  styleslider={styleslider} sliderValue={sliderValue} checkBoxValue={checkBoxValue} handleChange={handleChange} handleCheckChange={handleCheckChange} handleSubmit={handleSubmit} strength={strengthValue}/>
+    <SettingAdjustment  errMessage={errMessage} styleslider={styleslider} sliderValue={sliderValue} checkBoxValue={checkBoxValue} handleChange={handleChange} handleCheckChange={handleCheckChange} handleSubmit={handleSubmit} strength={strengthValue}/>
     
 
    
